@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+:root{
+  --primary: #f55951;
+  --secondary: #361d32;
+  --white: #ffffff;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+*,::before,::after{
+  box-sizing: border-box;
+}
