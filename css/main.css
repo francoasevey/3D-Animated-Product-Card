@@ -47,3 +47,17 @@ img{
   background-size: cover;
   background-position: center;
 }
+.products .item .title h2{
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 568px) {
+  .products .item .image{
+    transition: transform .3s;
+  }
+  .products .item .image:hover .image{
+    transform: scale(1.5) translate3d(30%, -20%, 0);
+  }
+}
