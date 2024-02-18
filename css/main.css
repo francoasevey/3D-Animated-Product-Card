@@ -27,3 +27,17 @@ img{
   max-width: 100%;
   vertical-align: middle;
 }
+.site{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.products .item{
+  position: relative;
+  max-width: 350px;
+  padding: 30px;
+  background-color: var(--secondary);
+  box-shadow: 0 10px 36px 0 rgb(0 0 0 / 16%);
+  
+}
