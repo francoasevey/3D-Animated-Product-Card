@@ -57,7 +57,26 @@ img{
   .products .item .image{
     transition: transform .3s;
   }
-  .products .item .image:hover .image{
+  .products .item .image img{
+    position: relative;
+  }
+  .products .item:hover .image{
     transform: scale(1.5) translate3d(30%, -20%, 0);
+  }
+  .products .item .image::before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    top: 25%;
+    right: 0;
+    filter: blur(90px);
+    opacity: 0;
+    transition: opacity .3s;
+  }
+  .products .item:hover .image::before{
+    opacity: .75;
   }
 }
