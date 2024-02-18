@@ -53,6 +53,37 @@ img{
   text-transform: uppercase;
   margin-bottom: 30px;
 }
+.products .item:hover .image img{
+  animation: motionProduct 2s infinite;
+}
+@keyframes motionProduct{
+  0%, 100%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(10px);
+  }
+}
+.products .item .meta{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.products .item .size label{
+  width: 36px;
+  height: 36px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 @media screen and (min-width: 568px) {
   .products .item .image{
     transition: transform .3s;
