@@ -128,4 +128,19 @@ img{
   .products .item:hover .image::before{
     opacity: .75;
   }
+  .products .item .size{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    flex-direction: column;
+    flex-basis: auto;
+    transform: translateY(-50%);
+    padding: 0 30px;
+  }
+  .products .item .size label{
+    transform: translateX(-100px);
+  }
+  .products .item:hover .size label{
+    transform: translateX(0);
+  }
 }
