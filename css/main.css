@@ -116,6 +116,7 @@ img{
   color: var(--white);
   background-color: transparent;
   cursor: pointer;
+  overflow: hidden;
 }
 .products .item .addtocart button::before{
   content: '';
@@ -125,12 +126,54 @@ img{
   width: 50px;
   height: 50px;
   background-color: var(--primary);
+  transition: background-color .3s 2s;
+}
+.products .item .addtocart button:hover:before{
+  background-color: var(--white);
+}
+.products .item .addtocart span{
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: transform .3s, opacity .3s;
+}
+.products .item:hover .addtocart button span{
+  transform: translateX(0);
+  opacity: 1;
 }
 .products .item .addtocart button i{
   color: var(--white);
   padding-right: 12px;
   margin-left: 24px;
   z-index: 10;
+}
+.products .item:hover .addtocart button i{
+  animation: motionArrow 1.5s infinite;
+}
+@keyframes motionArrow{
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(5px);
+  }
+}
+.products .item .addtocart button:hover i{
+  color: var(--primary);
+  animation: runArrow .5s forwards;
+}
+@keyframes runArrow{
+  33%{
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  66%{
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 @media screen and (min-width: 568px) {
   .products .item .image{
