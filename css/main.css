@@ -125,9 +125,6 @@ img{
   .products .item:hover .image::before{
     opacity: .75;
   }
-  .products .item:hover .image::before{
-    opacity: .75;
-  }
   .products .item .size{
     position: absolute;
     top: 50%;
@@ -142,5 +139,17 @@ img{
   }
   .products .item:hover .size label{
     transform: translateX(0);
+  }
+  .products .item .size label:nth-child(2){
+    transition-delay: 50ms;
+  }
+  .products .item .size label:nth-child(4){
+    transition-delay: 100ms;
+  }
+  .products .item .size label:nth-child(6){
+    transition-delay: 150ms;
+  }
+  .products .item .size label:nth-child(8){
+    transition-delay: 200ms;
   }
 }
