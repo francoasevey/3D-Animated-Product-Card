@@ -71,6 +71,13 @@ img{
   align-items: center;
   margin-top: 30px;
 }
+.products .item .size{
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
 .products .item .size label{
   width: 36px;
   height: 36px;
@@ -83,6 +90,14 @@ img{
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.products .item .size input:checked + label{
+  color: var(--primary);
+  background-color: var(--white);
+  box-shadow: inset 0 0 0 3px var(--primary);
+}
+.products .item .size input{
+  display: none;
 }
 @media screen and (min-width: 568px) {
   .products .item .image{
@@ -106,6 +121,9 @@ img{
     filter: blur(90px);
     opacity: 0;
     transition: opacity .3s;
+  }
+  .products .item:hover .image::before{
+    opacity: .75;
   }
   .products .item:hover .image::before{
     opacity: .75;
