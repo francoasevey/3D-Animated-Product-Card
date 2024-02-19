@@ -90,6 +90,7 @@ img{
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: transform .3s, box-shadow .3s, background-color ,3s;
 }
 .products .item .size input:checked + label{
   color: var(--primary);
@@ -99,6 +100,10 @@ img{
 .products .item .size input{
   display: none;
 }
+.products .item .price{
+  font-size: 24px;
+  font-weight: 300;
+}
 @media screen and (min-width: 568px) {
   .products .item .image{
     transition: transform .3s;
@@ -107,7 +112,7 @@ img{
     position: relative;
   }
   .products .item:hover .image{
-    transform: scale(1.5) translate3d(30%, -20%, 0);
+    transform: scale(1.25) translate3d(30%, -20%, 0);
   }
   .products .item .image::before{
     content: '';
@@ -133,6 +138,7 @@ img{
     flex-basis: auto;
     transform: translateY(-50%);
     padding: 0 30px;
+    overflow: hidden;
   }
   .products .item .size label{
     transform: translateX(-100px);
